@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>De la Evi, pentru Licea !</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7dacc; /* Updated background color */
+        text-align: center;
+        overflow: hidden; /* Hide overflow for animation */
+        margin: 0;
+      }
+      h1 {
+        color: #e74c3c;
+      }
+      .butterfly {
+        position: absolute;
+        animation: flutter 5s infinite alternate;
+      }
+      @keyframes flutter {
+        0% {
+          transform: translateY(0) rotate(0);
+        }
+        100% {
+          transform: translateY(-20px) rotate(20deg);
+        }
+      }
+      .button-container {
+        margin-top: 20px;
+        position: relative;
+      }
+      button {
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button.no {
+        padding: 10px;
+        font-size: 16px;
+        pointer-events: auto;
+
+        transition: transform 0.3s ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>De la Evi, pentru Licea</h1>
+    <p>Licea, te iubesc foarte mult și mi-e dor de tine !</p>
+    <img src="https://i.ibb.co/DRg3q7N/msg777000-342286.jpg" width="500" />
+    <!-- Add more content here: messages, memories, etc. -->
+    <div
+      class="butterfly"
+      style="top: 100px; right: 50px"
+      alt="Butterfly"
+      width="70"
+    >
+      <img
+        src="https://i.ibb.co/4gSjCy6/pngtree-watercolor-pink-butterfly-png-image-13017832.png"
+        alt="Butterfly"
+        width="70"
+      />
+    </div>
+    <div class="butterfly" style="top: 120px; left: 120px">
+      <img
+        src="https://i.ibb.co/4gSjCy6/pngtree-watercolor-pink-butterfly-png-image-13017832.png"
+        alt="Butterfly"
+        width="70"
+      />
+    </div>
+
+    <!-- Add 10 butterflies in different corners -->
+    <div class="butterfly" style="top: 50px; right: 20px">
+      <img
+        src="https://i.ibb.co/4gSjCy6/pngtree-watercolor-pink-butterfly-png-image-13017832.png"
+        alt="Butterfly"
+        width="40"
+      />
+    </div>
+    <div class="butterfly" style="top: 300px; left: 50px">
+      <img
+        src="https://i.ibb.co/4gSjCy6/pngtree-watercolor-pink-butterfly-png-image-13017832.png"
+        alt="Butterfly"
+        width="60"
+      />
+    </div>
+    <!-- Add more butterflies with different positions and sizes -->
+
+    <!-- Button with Yes/No options -->
+    <div class="button-container">
+      <p>Doresti o poezie Licea?</p>
+      <button onclick="displayLove()">Da</button>
+      <button class="no" onmousemove="moveButton(event)">Nu</button>
+    </div>
+
+    <script>
+      function displayLove() {
+        alert(
+          ` Te iubesc nespus, Felicia, draga mea ! \n  Când suntem împreună, timpul stă în loc ; \n Marchiz, Musica, Cuzea și cu mine, Evi, \n Te încurajăm din suflet și-ți dorim noroc! \n MIAU!`,
+        );
+      }
+
+      function moveButton(event) {
+        const button = document.querySelector(".no");
+        const rect = button.getBoundingClientRect();
+        const x = event.clientX - rect.width / 2;
+        const y = event.clientY - rect.height / 2;
+        button.style.transform = `translate(${x}px, ${y}px)`;
+      }
+    </script>
+  </body>
+</html>
